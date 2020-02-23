@@ -1,14 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
 
+/* custom variable */
+:root {
+    --primary-color: #2d7d98;
+    --secundary-blue: #00bfff;
+    --gray-color: #707070;
+    --white-color: #ffffff;
+    --btn-color: #f89104;
+    --btn-hover: rgb(216, 126, 1);
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
 .hero-bg {
-    background: #2d7d98 url('../images/bg.jpg');
+    background: var(--primary-color) url('../images/bg.jpg');
     background-position: 12% 83%;
-    color: #fff;
+    color: var(--white-color);
     text-align: center;
     padding-bottom: 4em;
 }
@@ -18,7 +28,7 @@ header {
 }
 
 .hero-bg a {
-    color: #fff;
+    color: var(--white-color);
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem; 
@@ -45,7 +55,7 @@ h1 span::before {
     content: '';
     position: absolute;
     width: 4.9em;
-    background: #00bfff;
+    background: var(--secundary-blue);
     height: .4em;
     bottom: 0;
     z-index: -1;
@@ -58,13 +68,13 @@ h1 span::before {
 }
 
 .form-container {
-    background-color: #fff;
+    background-color: var(--white-color);
     margin: 2em -1em 0;
     padding: 2em;
 }
 
 label {
-    color: #2d7d98;
+    color: var(--primary-color);
     font-weight: bold;
     display: block;
     margin-bottom: 1em;
@@ -72,7 +82,7 @@ label {
 }
 
 input[type=text] {
-    border: 1px solid #707070;
+    border: 1px solid var(--gray-color);
     width: 100%;
     padding: 1em;
     box-sizing: border-box;
@@ -81,17 +91,17 @@ input[type=text] {
 }
 
 .form-container p {
-    color: #707070;
+    color: var(--gray-color);
     margin-bottom: 1.5em;
     font-weight: normal;
     font-size: 0.9em;
 }
 
 input[type=button] {
-    background-color: #f89104;
+    background-color: var(--btn-color);
     border: none;
     width: 100%;
-    color: #fff;
+    color: var(--white-color);
     font-weight: bold;
     padding: 1em 0;
     border-radius: .5em;
@@ -101,5 +111,38 @@ input[type=button] {
 
 
 input[type=button]:hover {
-    background-color: rgb(216, 126, 1);
+    background-color: var(--btn-hover);
+}
+
+.authentic {
+    margin: 0;
+}
+
+.right-col {
+    text-align: center;
+    margin: 3em 1em;
+}
+
+h2 {
+    text-transform: uppercase;
+    position: relative;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    width: 8em;
+    background: var(--secundary-blue);
+    height: .4em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -.3em;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    line-height: 2em;
 }
