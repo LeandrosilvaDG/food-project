@@ -16,7 +16,8 @@ body {
 }
 
 .hero-bg {
-    background: var(--primary-color) url('../images/bg.jpg');
+    background: var(--primary-color) url('../images/bg.jpg') no-repeat;
+    background-size: cover;
     background-position: 12% 83%;
     color: var(--white-color);
     text-align: center;
@@ -154,6 +155,22 @@ footer {
     color: var(--gray-color)
 }
 
+.overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, .9);
+    z-index: 1;
+    place-content: center;
+    color: var(--white-color);
+    display: none;
+    opacity: 0; 
+}
+
+.animate-overlay {
+    animation: overlay 3s forwards;
+}
+
 @media (min-width: 730px) {
 
     section {
@@ -249,4 +266,20 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes overlay {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+
 }
